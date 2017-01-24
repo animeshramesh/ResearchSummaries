@@ -49,14 +49,14 @@
 	* For toy-RBMs, exact log-likelihood can be computed analytically.
 
 **10. Global Training of Deep Models**
-* 10.1 The Challenge of Training Deep Architectures
+* **10.1 The Challenge of Training Deep Architectures**
 	* Higher-level abstraction = more non-linearity.
 		
 **11. Building-in invariance.**
 * Incorporating prior knowledge is beneficial.
 * How basic domain knowledge of input may be used to learn better features.
-* 11.1 Generating transformed examples : Augment training data by including samples with slightly more deformations to original samples. (Translation, scale, shear, rotation invariance)
-* 11.2 Convolutions and pooling
+* **11.1 Generating transformed examples :** Augment training data by including samples with slightly more deformations to original samples. (Translation, scale, shear, rotation invariance)
+* **11.2 Convolutions and pooling**
 	* Exploit the topological structure (2D in images)
 	* Similar input values at nearby values. (local receptive field)
 	* Output of convolution -> feature map. 
@@ -69,8 +69,8 @@
 		* Tiled convolution -> parameters are shared only between feature extractors that are 'k' steps away. This allows pooling units to be invariant to more than just translations.
 	* Alternatives to pooling :
 		* Scattering operators : has convolutions and pooling/sparse, high dimensional features/features are not learnt, they are set. 
-* 11.3 Temporal coherance and slow features
-	* Features which are temporally close together tend to be similar.
+* **11.3 Temporal coherance and slow features**	
+* Features which are temporally close together tend to be similar.
 	* Temporal coherance prior can be represented as :
 		* Squared diff between features at t and t+1
 		* Absolute value in the above case -> enforce that difference should be 0.
